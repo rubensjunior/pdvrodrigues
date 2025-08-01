@@ -29,11 +29,29 @@
         "module": "api",
         "action": "send",
         "options": {
-          "url": "{{'https://rodrigues182754.protheus.cloudtotvs.com.br:4050/rest/rcpdv/vendedores/vend/'+$_POST.ipt_matricula}}",
+          "url": "{{'https://rodrigues182754.protheus.cloudtotvs.com.br:4050/rest/rcpdv/vendedores/login/'+$_POST.ipt_matricula}}",
           "schema": [
             {
-              "type": "text",
-              "name": "data"
+              "type": "object",
+              "name": "data",
+              "sub": [
+                {
+                  "type": "text",
+                  "name": "codigo"
+                },
+                {
+                  "type": "text",
+                  "name": "nome"
+                },
+                {
+                  "type": "text",
+                  "name": "senha"
+                },
+                {
+                  "type": "text",
+                  "name": "datalogin"
+                }
+              ]
             },
             {
               "type": "object",
@@ -83,12 +101,31 @@
           "password": "Rubens25@@",
           "headers": {
             "Content-Type": "application/json"
-          }
+          },
+          "dataType": "json"
         },
         "meta": [
           {
-            "type": "text",
-            "name": "data"
+            "type": "object",
+            "name": "data",
+            "sub": [
+              {
+                "type": "text",
+                "name": "codigo"
+              },
+              {
+                "type": "text",
+                "name": "nome"
+              },
+              {
+                "type": "text",
+                "name": "senha"
+              },
+              {
+                "type": "text",
+                "name": "datalogin"
+              }
+            ]
           },
           {
             "type": "object",
