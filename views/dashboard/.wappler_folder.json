@@ -1,0 +1,10 @@
+{
+  "inicial.ejs": {
+    "layoutPage": "backoffice",
+    "description": ""
+  },
+  "tabela-de-preco.ejs": {
+    "layoutPage": "backoffice",
+    "description": ""
+  }
+}

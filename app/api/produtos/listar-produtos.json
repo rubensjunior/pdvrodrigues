@@ -1,0 +1,115 @@
+{
+  "name": "api_produtos",
+  "module": "api",
+  "action": "send",
+  "options": {
+    "url": "https://rodrigues182754.protheus.cloudtotvs.com.br:4050/rest/rcpdv/faturamento/tabela/90",
+    "schema": [
+      {
+        "type": "text",
+        "name": "data"
+      },
+      {
+        "type": "object",
+        "name": "headers",
+        "sub": [
+          {
+            "type": "text",
+            "name": "connection"
+          },
+          {
+            "type": "text",
+            "name": "content-encoding"
+          },
+          {
+            "type": "text",
+            "name": "content-language"
+          },
+          {
+            "type": "text",
+            "name": "content-length"
+          },
+          {
+            "type": "text",
+            "name": "content-type"
+          },
+          {
+            "type": "text",
+            "name": "date"
+          },
+          {
+            "type": "text",
+            "name": "keep-alive"
+          },
+          {
+            "type": "text",
+            "name": "server"
+          },
+          {
+            "type": "text",
+            "name": "vary"
+          }
+        ]
+      }
+    ],
+    "dataType": "json",
+    "throwErrors": true,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "auth": "username",
+    "username": "RUBENS.API",
+    "password": "Rubens25@@"
+  },
+  "output": true,
+  "meta": [
+    {
+      "type": "text",
+      "name": "data"
+    },
+    {
+      "type": "object",
+      "name": "headers",
+      "sub": [
+        {
+          "type": "text",
+          "name": "connection"
+        },
+        {
+          "type": "text",
+          "name": "content-encoding"
+        },
+        {
+          "type": "text",
+          "name": "content-language"
+        },
+        {
+          "type": "text",
+          "name": "content-length"
+        },
+        {
+          "type": "text",
+          "name": "content-type"
+        },
+        {
+          "type": "text",
+          "name": "date"
+        },
+        {
+          "type": "text",
+          "name": "keep-alive"
+        },
+        {
+          "type": "text",
+          "name": "server"
+        },
+        {
+          "type": "text",
+          "name": "vary"
+        }
+      ]
+    }
+  ],
+  "outputType": "object",
+  "collapsed": true
+}

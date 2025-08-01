@@ -1,0 +1,60 @@
+<!-- Wappler include head-page="layouts/backoffice" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="tabeladepreco" appConnect="local" components="{dmxBootstrap5TableGenerator:{},dmxBootstrap5Navigation:{},dmxBootstrap5Offcanvas:{},dmxFormatter:{}}" -->
+<dmx-serverconnect id="ap_tabela_de_preco" url="/api/tabela_de_preco/tabela_preco" dmx-param:id_filial="dados_usuario.data.filial"></dmx-serverconnect>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+
+            <div class="d-flex justify-content-between align-items-center mb-4 p-0">
+                <div class="d-flex align-items-center gap-3">
+                    <h5 class="m-0">Tabela de preços</h5>
+                </div>
+                <div class="d-flex w-75 align-items-center justify-content-end p-0 m-0">
+                    <div class="form-group me-3"> <label for="input1" class="form-label mb-1">Some text</label>
+                        <input type="text" class="form-control" id="input1" name="input1" aria-describedby="input1_help" placeholder="Enter some text">
+                    </div>
+                    <div class="form-group me-3"> <label for="input2" class="form-label mb-1">Some text</label>
+                        <input type="text" class="form-control" id="input2" name="input1" aria-describedby="input1_help" placeholder="Enter some text">
+                    </div>
+                    <div class="form-group me-3"> <label for="input3" class="form-label mb-1">Some text</label>
+                        <input type="text" class="form-control" id="input3" name="input1" aria-describedby="input1_help" placeholder="Enter some text">
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="row m-0">
+                <div class="col p-4 bg-white rounded-3">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Código de Barras</th>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>Preço de Venda</th>
+                                <th>Tabela de Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody is="dmx-repeat" id="tableRepeat2" dmx-bind:repeat="ap_tabela_de_preco.data">
+                            <tr>
+                                <td dmx-text="CodigoBarras"></td>
+                                <td dmx-text="Codigo"></td>
+                                <td dmx-text="Descricao"></td>
+                                <td dmx-text="PrecoVenda"></td>
+                                <td dmx-text="Tabela"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="d-flex">
+                <ul class="pagination"></ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<meta name="ac:route" content="/backoffice/d/tabela-de-preco">

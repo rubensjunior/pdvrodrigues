@@ -1,0 +1,665 @@
+/*Elementos HTML */
+body {
+  background-color:#f3f3f3;
+}
+.bg-sidebar-login{
+  background-image: url(../assets/images/bg-login.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mini-texto{
+  font-size: 13px;
+}
+.form-label{
+  font-size: 14px;
+  font-weight: 500;
+}
+.texto-tabela{
+  font-size: 14px;
+}
+.titulo-tabela{
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Header Styles */
+.header-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #dee2e6;
+  margin: 0 20px;
+  opacity: 0.8;
+}
+
+/* Menu Dropdown Styles - Tema escuro */
+.dropdown-menu {
+  background-color: #343a40;
+  border: 1px solid #495057;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.dropdown-item:active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.dropdown-divider {
+  border-color: #6c757d;
+  margin: 8px 0;
+}
+
+/* User Menu Styles - Adaptado para tema escuro */
+.user-menu-btn {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 8px 12px !important;
+  border-radius: 8px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.user-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  opacity: 1 !important;
+}
+
+.user-menu-btn:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.user-menu-btn::after {
+  margin-left: 8px;
+  border-top-color: #ffffff;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-size: 16px;
+}
+
+.user-info {
+  text-align: left;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.user-role {
+  font-size: 12px;
+  color: #cccccc;
+  line-height: 1.2;
+}
+
+/* Dropdown do perfil com tema escuro */
+.user-dropdown {
+  min-width: 240px;
+  padding: 0;
+  border: 1px solid #495057;
+  border-radius: 8px;
+  background-color: #343a40;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.user-dropdown-header {
+  padding: 16px 20px 12px;
+  background-color: #495057;
+  border-bottom: 1px solid #6c757d;
+  border-radius: 8px 8px 0 0;
+  color: #ffffff;
+}
+
+.user-dropdown-header strong {
+  color: #ffffff;
+}
+
+.user-dropdown-header .text-muted {
+  color: #adb5bd !important;
+}
+
+.user-dropdown .dropdown-item {
+  padding: 12px 20px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.user-dropdown .dropdown-item:hover {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.user-dropdown .dropdown-item.text-danger {
+  color: #ff6b6b !important;
+}
+
+.user-dropdown .dropdown-item.text-danger:hover {
+  background-color: #dc3545;
+  color: #ffffff !important;
+}
+
+.user-dropdown .dropdown-item i {
+  width: 16px;
+  text-align: center;
+  color: inherit;
+}
+
+.user-dropdown .dropdown-divider {
+  margin: 8px 0;
+  border-color: #6c757d;
+}
+
+/* Tamanho mínimo de 48px para inputs e botões (melhor acessibilidade) */
+
+/* Inputs básicos - SEM BORDAS E SEM SOMBRAS */
+.form-control,
+.form-select,
+.form-control-plaintext {
+  min-height: 48px;
+  padding: 12px 16px;
+  border: none !important;
+  border-radius: 8px;
+  background-color: #ffffff;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Inputs de checkbox e radio */
+.form-check-input {
+  min-width: 48px;
+  min-height: 48px;
+  margin-top: 0;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Ajuste para labels de checkbox e radio para alinhar com inputs maiores */
+.form-check-label {
+  padding-left: 8px;
+  line-height: 48px;
+}
+
+/* Container de checkbox e radio para melhor espaçamento */
+.form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 48px;
+  margin-bottom: 8px;
+}
+
+/* Botões */
+.btn {
+  min-height: 48px;
+  padding: 12px 24px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Botões pequenos ainda respeitam o tamanho mínimo */
+.btn-sm {
+  min-height: 48px;
+  padding: 12px 20px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Input groups mantêm alinhamento - SEM BORDAS E SEM SOMBRAS */
+.input-group > .form-control,
+.input-group > .form-select,
+.input-group > .btn {
+  min-height: 48px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.input-group-text {
+  min-height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 16px;
+  border: none !important;
+  background-color: #f8f9fa;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Range inputs */
+.form-range {
+  min-height: 48px;
+  padding: 20px 0;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Floating labels - ajuste para o novo tamanho SEM BORDAS E SEM SOMBRAS */
+.form-floating > .form-control,
+.form-floating > .form-select {
+  min-height: 48px;
+  padding: 16px 12px 8px 12px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.form-floating > label {
+  padding: 16px 12px;
+}
+
+/* File inputs - SEM BORDAS E SEM SOMBRAS */
+.form-control[type="file"] {
+  min-height: 48px;
+  padding: 12px 16px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Color inputs - SEM BORDAS E SEM SOMBRAS */
+.form-control[type="color"] {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 8px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Textareas mantêm altura mínima mas podem crescer - SEM BORDAS E SEM SOMBRAS */
+textarea.form-control {
+  min-height: 48px;
+  resize: vertical;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Switches mantêm proporção adequada - SEM BORDAS E SEM SOMBRAS */
+.form-check-input[type="checkbox"].form-switch {
+  width: 48px;
+  height: 24px;
+  min-width: 48px;
+  min-height: 24px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Ajustes para responsividade - em telas pequenas, mantém tamanho acessível */
+@media (max-width: 576px) {
+  .form-control,
+  .form-select,
+  .btn {
+    min-height: 48px;
+    font-size: 16px; /* Previne zoom em iOS */
+    border: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  
+  /* Input groups em mobile */
+  .input-group {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  
+  .input-group > .form-control,
+  .input-group > .form-select,
+  .input-group > .btn {
+    min-height: 48px;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  
+  /* Divisor do header responsivo */
+  .header-divider {
+    margin: 0 15px;
+    height: 25px;
+  }
+  
+  /* User menu responsivo */
+  .user-dropdown {
+    min-width: 200px;
+  }
+  
+  .user-dropdown-header {
+    padding: 12px 16px 8px;
+  }
+  
+  .user-dropdown .dropdown-item {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  /* Menu dropdown responsivo */
+  .dropdown-menu {
+    min-width: 180px;
+  }
+  
+  .dropdown-item {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Melhorias de foco para acessibilidade - SEM SOMBRAS */
+.form-control:focus,
+.form-select:focus,
+.btn:focus,
+.form-check-input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Estados hover para melhor feedback visual - SEM SOMBRAS */
+.btn:hover:not(:disabled) {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: none !important;
+  opacity: 0.9;
+}
+
+.form-control:hover:not(:disabled):not(:focus) {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  border: none !important;
+  background-color: #f8f9fa;
+}
+
+/* Estados de validação - SEM SOMBRAS */
+.form-control.is-valid,
+.form-select.is-valid {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #d1e7dd;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #f8d7da;
+}
+
+/* Input groups - remove bordas internas */
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: 0;
+  border-left: none !important;
+}
+
+/* Garante que não apareçam bordas e sombras em nenhum estado */
+.form-control:not(:disabled):not([readonly]),
+.form-select:not(:disabled):not([readonly]) {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.form-control:disabled,
+.form-control[readonly],
+.form-select:disabled,
+.form-select[readonly] {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #f8f9fa;
+  opacity: 0.6;
+}
+
+/* Remove todas as sombras do Bootstrap */
+.form-control,
+.form-select,
+.btn,
+.form-check-input,
+.input-group-text {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+.btn:focus,
+.form-check-input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Nova classe de input com fundo #f9f9f9 */
+.form-control-light {
+  min-height: 48px;
+  padding: 12px 16px;
+  border: none !important;
+  border-radius: 8px;
+  background-color: #f9f9f9 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #212529;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition: background-color 0.2s ease, outline 0.2s ease;
+  transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+.form-control-light:focus {
+  background-color: #f9f9f9 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+.form-control-light:hover:not(:disabled):not(:focus) {
+  background-color: #f5f5f5 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.form-control-light:disabled,
+.form-control-light[readonly] {
+  background-color: #f0f0f0 !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  opacity: 0.6;
+}
+
+.form-control-light::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+.form-control-light::-moz-placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+.form-control-light:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+.form-control-light::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+.form-control-light::placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+/* Versão para select com fundo #f9f9f9 */
+.form-select-light {
+  min-height: 48px;
+  padding: 12px 16px;
+  border: none !important;
+  border-radius: 8px;
+  background-color: #f9f9f9 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #212529;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition: background-color 0.2s ease, outline 0.2s ease;
+  transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+.form-select-light:focus {
+  background-color: #f9f9f9 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+.form-select-light:hover:not(:disabled):not(:focus) {
+  background-color: #f5f5f5 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.form-select-light:disabled,
+.form-select-light[readonly] {
+  background-color: #f0f0f0 !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  opacity: 0.6;
+}
+
+/* Versão para textarea com fundo #f9f9f9 */
+textarea.form-control-light {
+  min-height: 48px;
+  resize: vertical;
+  background-color: #f9f9f9 !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Estados de validação para form-control-light */
+.form-control-light.is-valid,
+.form-select-light.is-valid {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #e6f3e6 !important;
+}
+
+.form-control-light.is-invalid,
+.form-select-light.is-invalid {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #fce8e8 !important;
+}
+
+/* Input groups com form-control-light */
+.input-group > .form-control-light,
+.input-group > .form-select-light {
+  min-height: 48px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* Floating labels com form-control-light */
+.form-floating > .form-control-light,
+.form-floating > .form-select-light {
+  min-height: 48px;
+  padding: 16px 12px 8px 12px;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}

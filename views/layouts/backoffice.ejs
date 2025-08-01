@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+  <base href="/">
+  <script src="/dmxAppConnect/dmxAppConnect.js"></script>
+  <meta charset="UTF-8">
+  <title>PDV Rodrigues Colchões</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/bootstrap/5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/dmxAppConnect/dmxRouting/dmxRouting.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxBootstrap5TableGenerator/dmxBootstrap5TableGenerator.css" />
+  <script src="/dmxAppConnect/dmxBootstrap5Navigation/dmxBootstrap5Navigation.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5Offcanvas/dmxBootstrap5Offcanvas.js" defer></script>
+  <script src="/dmxAppConnect/dmxStateManagement/dmxStateManagement.js" defer></script>
+  <script src="/dmxAppConnect/dmxBrowser/dmxBrowser.js" defer></script>
+<script src="/dmxAppConnect/dmxFormatter/dmxFormatter.js" defer></script>
+</head>
+
+<body is="dmx-app" id="backoffice">
+  <div is="dmx-browser" id="navegacao"></div>
+  <dmx-value id="verificar_login" dmx-bind:value="true"></dmx-value>
+  <dmx-local-manager id="dados_usuario"></dmx-local-manager>
+
+  <div dmx-on:show="verificar_login.value && !dados_usuario.data && navegacao.goto('/')" style="display:none;"></div>
+
+  <header class="bg-black py-3 px-4">
+    <div class="row align-items-center">
+      <div class="col d-flex align-items-center">
+        <div class="dropdown">
+          <button id="dropdown1" class="btn dropdown-toggle px-1 text-light" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars me-3"></i>Menu</button>
+          <div class="dropdown-menu mt-3" aria-labelledby="dropdown1">
+            <a class="dropdown-item" href="/backoffice/d/tabela-de-preco" internal="true">Tabela de Preço</a>
+            <a class="dropdown-item" href="#">Comissão</a>
+            <a class="dropdown-item" href="#">Estoque</a>
+            <a class="dropdown-item" href="#">PDV</a>
+          </div>
+        </div>
+        <div class="position-relative">
+        </div>
+
+        <div class="header-divider"></div>
+        <a href="/backoffice/d/" internal="true"><img src="/assets/images/LOGO BRANCO.png" class="img-fluid" width="100"></a>
+      </div>
+      <div class="col"></div>
+      <div class="col text-end">
+        <div class="dropdown">
+          <button id="dropdown_menu_perfil" class="btn btn-link dropdown-toggle user-menu-btn" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="d-flex align-items-center">
+              <div class="user-avatar me-3">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="user-info d-none d-md-block">
+                <div class="user-name">{{dados_usuario.data.Nome}}</div>
+                <div class="user-role">Codigo: {{dados_usuario.data.Codigo}} | Filial: {{dados_usuario.data.filial}}</div>
+              </div>
+            </div>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end user-dropdown" aria-labelledby="dropdown_menu_perfil">
+            <div class="dropdown-header user-dropdown-header">
+              <strong>João Silva</strong><br>
+              <small class="text-muted">joao.silva@empresa.com</small>
+            </div>
+            <a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Perfil de Usuário</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-key me-2"></i>Mudar Senha</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" href="#" dmx-on:click="dados_usuario.removeAll();navegacao.reload()"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main is="dmx-view" id="content" class="p-4">
+    <%- await include(content, locals); %>
+  </main>
+
+
+  <script src="/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

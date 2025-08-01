@@ -1,0 +1,270 @@
+{
+  "meta": {
+    "$_GET": [
+      {
+        "type": "text",
+        "name": "id_filial"
+      }
+    ]
+  },
+  "exec": {
+    "steps": [
+      {
+        "name": "api",
+        "module": "api",
+        "action": "send",
+        "options": {
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "auth": "username",
+          "username": "RUBENS.API",
+          "password": "Rubens25@@",
+          "url": "https://rodrigues182754.protheus.cloudtotvs.com.br:4050/rest/rcpdv/faturamento/tabela/90",
+          "schema": [
+            {
+              "type": "object",
+              "name": "data",
+              "sub": [
+                {
+                  "type": "array",
+                  "name": "DA0",
+                  "sub": [
+                    {
+                      "type": "text",
+                      "name": "Barra"
+                    },
+                    {
+                      "type": "text",
+                      "name": "Codigo"
+                    },
+                    {
+                      "type": "text",
+                      "name": "Descricao"
+                    },
+                    {
+                      "type": "number",
+                      "name": "PrecoVenda"
+                    },
+                    {
+                      "type": "text",
+                      "name": "Tabela"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "name": "headers",
+              "sub": [
+                {
+                  "type": "text",
+                  "name": "connection"
+                },
+                {
+                  "type": "text",
+                  "name": "content-encoding"
+                },
+                {
+                  "type": "text",
+                  "name": "content-language"
+                },
+                {
+                  "type": "text",
+                  "name": "content-length"
+                },
+                {
+                  "type": "text",
+                  "name": "content-type"
+                },
+                {
+                  "type": "text",
+                  "name": "date"
+                },
+                {
+                  "type": "text",
+                  "name": "keep-alive"
+                },
+                {
+                  "type": "text",
+                  "name": "server"
+                },
+                {
+                  "type": "text",
+                  "name": "vary"
+                }
+              ]
+            }
+          ]
+        },
+        "collapsed": true,
+        "output": false,
+        "meta": [
+          {
+            "type": "object",
+            "name": "data",
+            "sub": [
+              {
+                "type": "array",
+                "name": "DA0",
+                "sub": [
+                  {
+                    "type": "text",
+                    "name": "Barra"
+                  },
+                  {
+                    "type": "text",
+                    "name": "Codigo"
+                  },
+                  {
+                    "type": "text",
+                    "name": "Descricao"
+                  },
+                  {
+                    "type": "number",
+                    "name": "PrecoVenda"
+                  },
+                  {
+                    "type": "text",
+                    "name": "Tabela"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "name": "headers",
+            "sub": [
+              {
+                "type": "text",
+                "name": "connection"
+              },
+              {
+                "type": "text",
+                "name": "content-encoding"
+              },
+              {
+                "type": "text",
+                "name": "content-language"
+              },
+              {
+                "type": "text",
+                "name": "content-length"
+              },
+              {
+                "type": "text",
+                "name": "content-type"
+              },
+              {
+                "type": "text",
+                "name": "date"
+              },
+              {
+                "type": "text",
+                "name": "keep-alive"
+              },
+              {
+                "type": "text",
+                "name": "server"
+              },
+              {
+                "type": "text",
+                "name": "vary"
+              }
+            ]
+          }
+        ],
+        "outputType": "object"
+      },
+      {
+        "name": "resposta_produtos",
+        "module": "core",
+        "action": "setvalue",
+        "options": {
+          "key": "resposta_produtos",
+          "value": "{{api.data.parseJSON()}}"
+        },
+        "meta": [
+          {
+            "name": "data",
+            "type": "object",
+            "sub": [
+              {
+                "name": "DA0",
+                "type": "array",
+                "sub": [
+                  {
+                    "name": "Barra",
+                    "type": "text"
+                  },
+                  {
+                    "name": "Codigo",
+                    "type": "text"
+                  },
+                  {
+                    "name": "Descricao",
+                    "type": "text"
+                  },
+                  {
+                    "name": "PrecoVenda",
+                    "type": "number"
+                  },
+                  {
+                    "name": "Tabela",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "headers",
+            "type": "object",
+            "sub": [
+              {
+                "name": "connection",
+                "type": "text"
+              },
+              {
+                "name": "content-encoding",
+                "type": "text"
+              },
+              {
+                "name": "content-language",
+                "type": "text"
+              },
+              {
+                "name": "content-length",
+                "type": "text"
+              },
+              {
+                "name": "content-type",
+                "type": "text"
+              },
+              {
+                "name": "date",
+                "type": "text"
+              },
+              {
+                "name": "keep-alive",
+                "type": "text"
+              },
+              {
+                "name": "server",
+                "type": "text"
+              },
+              {
+                "name": "vary",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "outputType": "array",
+        "output": true
+      }
+    ]
+  }
+}

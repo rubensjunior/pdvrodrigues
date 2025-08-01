@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "page": "index",
+      "routeType": "page",
+      "layout": "main"
+    },
+    {
+      "path": "/backoffice/d/",
+      "page": "dashboard/inicial",
+      "layout": "backoffice"
+    },
+    {
+      "path": "/backoffice/d/tabela-de-preco",
+      "page": "dashboard/tabela-de-preco",
+      "layout": "backoffice"
+    }
+  ]
+}
