@@ -15,6 +15,11 @@
       "path": "/backoffice/d/tabela-de-preco",
       "page": "dashboard/tabela-de-preco",
       "layout": "backoffice"
+    },
+    {
+      "path": "/backoffice/d/pdv",
+      "page": "dashboard/pdv",
+      "layout": "backoffice"
     }
   ]
 }

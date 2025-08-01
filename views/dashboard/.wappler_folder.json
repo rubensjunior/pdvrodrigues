@@ -6,5 +6,9 @@
   "tabela-de-preco.ejs": {
     "layoutPage": "backoffice",
     "description": ""
+  },
+  "pdv.ejs": {
+    "layoutPage": "backoffice",
+    "description": ""
   }
 }

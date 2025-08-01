@@ -1,0 +1,96 @@
+<!-- Wappler include head-page="layouts/backoffice" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="pdv" appConnect="local" components="{dmxBootstrap5Modal:{}}" -->
+
+<div class="modal" id="informar_cliente" is="dmx-bs5-modal" tabindex="-1" nocloseonclick="true" nokeyboard="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center position-relative text-white bg-primary">
+                <h5 class="modal-title">Cliente</h5>
+            </div>
+            <div class="modal-body text-center">
+                <p>Deseja informar um cliente?</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" onclick="abrirSegundaModal()">Sim</button><button type="button" class="btn btn-secondary" dmx-on:click="informar_cliente.hide()">Não</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="buscar_cliente" is="dmx-bs5-modal" tabindex="-1" nocloseonclick="true" nokeyboard="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center position-relative text-white bg-primary">
+                <h5 class="modal-title">Buscar cliente</h5>
+            </div>
+            <div class="modal-body text-center">
+                <input id="cpf_busca" name="cpf_busca" type="text" class="form-control bg-light" placeholder="Informe o CPF do cliente">
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary">Pesquisar</button><button type="button" class="btn btn-secondary" onclick="fecharSegundaModal()">Cancelar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex align-items-center">
+                    <h5 class="m-0">Vendas assistidas</h5>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <div class="dropdown-menu" aria-labelledby="dropdown1">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div><input id="text1" name="text1" type="text" class="form-control" placeholder="Buscar orçamento">
+                    <button id="btn2" class="btn btn-primary ms-3" dmx-on:click="informar_cliente.show()"><i class="fas fa-plus me-2"></i>Atendimento</button>
+                </div>
+            </div>
+            <div class="d-flex"></div>
+        </div>
+    </div>
+</div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+<script>
+    $('#cpf_busca').mask('000.000.000-00');
+    
+    // Função para abrir a segunda modal com delay
+    function abrirSegundaModal() {
+        console.log('Abrindo segunda modal...');
+        
+        // Fecha a primeira modal usando Bootstrap diretamente
+        var modal1 = bootstrap.Modal.getInstance(document.getElementById('informar_cliente'));
+        if (modal1) {
+            modal1.hide();
+        }
+        
+        // Aguarda um pequeno delay e abre a segunda modal usando Bootstrap
+        setTimeout(() => {
+            console.log('Tentando abrir buscar_cliente...');
+            var modal2 = new bootstrap.Modal(document.getElementById('buscar_cliente'));
+            modal2.show();
+        }, 200);
+    }
+    
+    // Função para fechar a segunda modal e limpar backdrops
+    function fecharSegundaModal() {
+        // Fecha a modal usando Bootstrap diretamente
+        var modal = bootstrap.Modal.getInstance(document.getElementById('buscar_cliente'));
+        modal.hide();
+        
+        // Limpa todos os backdrops após um delay
+        setTimeout(() => {
+            document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
+            document.body.classList.remove('modal-open');
+        }, 150);
+    }
+</script>
+<meta name="ac:route" content="/backoffice/d/pdv">

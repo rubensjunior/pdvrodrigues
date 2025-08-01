@@ -28,13 +28,19 @@
   "targets": [
     {
       "name": "Development",
-      "remoteURL": "http://localhost:3000/",
+      "remoteURL": "http://localhost:3000",
       "access": "local",
       "targetType": "wappler",
-      "databaseConnectionType": "sqlite",
-      "sqliteDbFile": "/db/db_dev.sqlite3"
+      "databaseConnectionType": "custom",
+      "databaseType": "postgres",
+      "db_host": "aws-0-sa-east-1.pooler.supabase.com",
+      "db_port": "5432",
+      "db_user": "postgres.eqyafrpnfuwgessstuzc",
+      "db_password": "@Baki025@",
+      "db_database": "postgres"
     }
   ],
   "activeTarget": "Development",
-  "projectType": "web"
+  "projectType": "web",
+  "extensions": []
 }
